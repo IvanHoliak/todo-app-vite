@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "heroku-prebuild": "cd client && npm install && npm run deploy",
-        "heroku-postbuild": "cd server && npm install && npm run deploy"
+        "heroku-prebuild": "cd client && npm install",
+        "heroku-postbuild": "cd server && npm install && npm start"
     },
     "repository": {
         "type": "git",

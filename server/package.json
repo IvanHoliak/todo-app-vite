@@ -6,8 +6,7 @@
     "scripts": {
         "start": "node dist/server.js",
         "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/server.js\"",
-        "build": "tsc",
-        "deploy": "npm run build && npm run start"
+        "build": "tsc"
     },
     "keywords": [],
     "author": "",
