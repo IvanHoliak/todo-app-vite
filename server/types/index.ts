@@ -1,14 +1,3 @@
-// Config
-export type T_PORT = string | number;
-export type T_DB_URL = string;
-export type T_JWT_ACCESS_SECRET = string;
-export type T_JWT_REFRESH_SECRET = string;
-
-export interface ICONFIG {
-    PORT: T_PORT;
-    DB_URL: T_DB_URL;
-};
-
 export interface IProjects {
     id: string;
     title: string;
