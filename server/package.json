@@ -6,7 +6,6 @@
     "scripts": {
         "start": "node dist/server.js",
         "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/server.js\"",
-        "tsc": "./node_modules/typescript/bin/tsc",
         "build": "tsc"
     },
     "keywords": [],
