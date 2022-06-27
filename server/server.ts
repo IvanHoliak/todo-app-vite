@@ -19,8 +19,7 @@ app.use(cors())
 
 app.use('/api', _router);
 
-app.get("/", (req: Request, res: Response) => {
-    // res.send("⚡️ Express + TypeScript Server");
+app.get("*", (req: Request, res: Response) => {
     res.sendFile(path.join(__dirname, "../../client/dist", "index.html"));
 });
 
