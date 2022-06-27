@@ -1,0 +1,43 @@
+@import "./fonts";
+@import "./variables";
+@import "./libs/normalize";
+
+@import "./components";
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.tag {
+    background: rgb(133, 72, 72);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1px 4px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    
+    &__remove-button {
+        width: 10px;
+        height: 10px;
+        position: relative;
+        color: inherit;
+        margin-left: 6px;
+
+        
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            &:hover {
+                filter: drop-shadow(0 0 1px #000);
+            } 
+        }
+    }
+}
+
+

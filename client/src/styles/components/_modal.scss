@@ -1,0 +1,191 @@
+@mixin form {
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+
+        small{
+            color: red;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    background-color: rgba(0, 0, 0, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        width: 400px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: $backgroundColorTodos;
+        border-radius: 5px;
+        box-shadow: 0 0 2px $backgroundColorTodos;
+
+        label {
+            width: 80%;
+            text-align: left;
+            margin-bottom: -15px;
+        }
+
+        input {
+            width: 80%;
+            margin: 10px 0;
+            padding: 5px;
+            height: 30px;
+            font-size: 26px;
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, .7);
+        }
+
+        input[type="range"] {
+            padding: 0;
+        }
+
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 12px;
+            margin-top: -15px;
+            
+            li {
+                opacity: 0;
+            }
+
+            li:nth-child(1) {
+                margin-left: 20px;
+            }
+            
+            li:nth-child(3) {
+                margin-right: 20px;
+            }
+        }
+
+        select {
+            width: 80%;
+            margin: 10px 0;
+            padding: 0 5px;
+            height: 30px;
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, .7);
+            font-size: 18px;
+
+            option {
+                font-weight: 600;
+            }
+
+            option:disabled:not(:first-child) {
+                display: none;
+            }
+        }
+
+        &__selected-users-tags {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 5px;
+        }
+
+        &__create-button,
+        &__auth-button,
+        .auth-wrapper__btn {
+            width: 50%;
+            height: 30px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            border-radius: 5px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $textColorNav;
+            background: $backgroundColorNav;
+            margin: 5px 0;
+            transition: all .2s ease-in-out;
+
+            
+            &:hover {
+                box-shadow: 0 0 4px #000;
+            }
+            
+            &:active {
+                transform: scale(.95);
+                opacity: .7;
+            }
+
+            &:disabled,
+            &[disabled] {
+                opacity: .4;
+                
+                &:hover {
+                    box-shadow: none;
+                }
+                
+                &:active {
+                    transform: none;
+                    opacity: none;
+                }
+            }
+        }
+    }
+}
+
+.auth-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__form {
+        width: 100%;
+
+        &-login {
+            @include form;
+        }
+
+        &-registration {
+            @include form;
+        }
+    }
+
+    &__btns {
+        width: 100%;
+        height: 30px;
+    }
+
+    &__btn {
+        color: #000 !important;
+        background: transparent !important;
+        margin: 0 !important;
+
+        &:hover {
+            transform: scale(1) !important;
+        }
+    }
+
+    .active {
+        background: $backgroundColorNav !important;
+        color: $textColorNav !important;
+    }
+    
+}

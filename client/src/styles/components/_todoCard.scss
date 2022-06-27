@@ -1,0 +1,127 @@
+.todo-card {
+    width: 95%;
+    margin: 5px auto;
+    background: $backgroundColorCard;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: grab;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__importance-task {
+            height: 10px;
+            width: 150px;
+            display: flex;
+
+            div{
+                flex: 1;
+                height: 100%;
+                background: #fff;
+                border-top: 1px solid #000;
+                border-bottom: 1px solid #000;
+
+                &:nth-child(1) {
+                    border-left: 1px solid #000;
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+                &:nth-child(3) {
+                    border-right: 1px solid #000;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+                &:not(:last-child){
+                    border-right: 1px solid #000;
+                }
+            }
+            
+        }
+
+        &__remove-button {
+            display: block;
+            width: 30px;
+            height: 30px;
+            color: #fff;
+            background: transparent;
+            font-size: 20px;
+    
+            &:hover {
+                filter: drop-shadow(0 0 1px #000);
+            }
+        }
+    }
+
+
+    &__content {
+        br {
+            content: "";
+            height: 1px;
+            display: block;
+            background: #000;
+            margin: 5px 0;
+        }
+
+        &__description {
+            display: flex;
+            flex-direction: column;
+
+            button {
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                color: #fff;
+                background: $backgroundColorNav;
+                margin-left: auto;
+                margin-top: 5px;
+                font-size: 20px;
+
+                &:hover {
+                    box-shadow: 0 0 4px #000;
+                }
+            }
+
+            textarea {
+                max-width: 100%;
+                min-height: 60px;
+                resize: vertical;
+            }
+
+            p {
+                padding: 5px;
+                background: $backgroundColorTodos;
+                border-radius: 5px;
+                font-weight: 500;
+                font-size: 16px;
+                word-wrap: break-word;
+            }
+        
+        }
+
+        &__whom-tags {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tag__add-button {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            color: #fff;
+            background: $backgroundColorNav;
+            margin-left: auto;
+            margin-top: 5px;
+            font-size: 20px;
+
+            &:hover {
+                box-shadow: 0 0 4px #000;
+            }
+        }
+    }
+    
+
+}

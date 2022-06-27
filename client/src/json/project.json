@@ -1,0 +1,41 @@
+{
+    "id": 1,
+    "projectName": "Example Project",
+    "access": ["Ivan Holiak"],
+    "categories": [
+        {
+            "id": 1,
+            "title": "Tasks",
+            "tasks": [
+                {
+                    "id": 1,
+                    "description": "Will need to finish the ToDo project",
+                    "whom": ["Ivan Holiak"]
+                },
+                {
+                    "id": 2,
+                    "description": "Will need to deploy this ToDo project on the Vercel service",
+                    "whom": ["Ivan Holiak"]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "In progress",
+            "tasks": [
+                {
+                    "id": 3,
+                    "description": "In progress, will need to finish the ToDo project",
+                    "whom": ["Ivan Holiak"]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Check",
+            "tasks": [
+
+            ]
+        }
+    ]
+}
