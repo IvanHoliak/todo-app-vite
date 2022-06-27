@@ -5,7 +5,8 @@
     "scripts": {
         "dev": "vite",
         "preview": "vite preview",
-        "build": "tsc && vite build"
+        "tsc": "./node_modules/typescript/bin/tsc",
+        "build": "tsc && vite build",
     },
     "proxy": "http://localhost:3333",
     "dependencies": {
