@@ -3,10 +3,9 @@
     "private": true,
     "version": "0.0.0",
     "scripts": {
-        "tsc": "./node_modules/typescript/bin/tsc",
         "dev": "vite",
         "preview": "vite preview",
-        "build": "npm run tsc && vite build"
+        "build": "tsc && vite build"
     },
     "proxy": "http://localhost:3333",
     "dependencies": {
