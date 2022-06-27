@@ -4,6 +4,11 @@
     "main": "",
     "scripts": {
         "start": "node server/dist/server.js",
-        "postinstall": "tsc && vite build"
+        "install-client": "cd client && npm install && cd ..",
+        "install-server": "cd server && npm install && cd ..",
+        "heroku-prebuild": "npm run install-client && npm run install-server",
+        "build-client": "cd client && npm run build && cd ..",
+        "build-server": "cd server && npm run build && cd ..",
+        "heroku-postbuild": "npm run build-client && npm run build-server"
     }
 }
