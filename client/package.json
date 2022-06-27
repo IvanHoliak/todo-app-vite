@@ -6,7 +6,7 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "heroku-postbuild": "npm install && npm run build"
+        "heroku-prebuild": "npm install && npm run build"
     },
     "proxy": "http://localhost:3333",
     "dependencies": {
