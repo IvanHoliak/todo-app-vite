@@ -1,0 +1,21 @@
+{
+    "name": "todo-app-vite",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "heroku-prebuild": "cd client && npm install && npm run build",
+        "heroku-postbuild": "cd server && npm install && npm run build && npm run start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/IvanHoliak/todo-app-vite.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/IvanHoliak/todo-app-vite/issues"
+    },
+    "homepage": "https://github.com/IvanHoliak/todo-app-vite#readme"
+}
