@@ -35,6 +35,7 @@ const ModalCreateCategory: FC = () => {
             <button
                 className="modal-wrapper__content__create-button"
                 onClick={onClickCreateCategory}
+                disabled={title.length > 0 ? false : true}
             >
                 Create
             </button>

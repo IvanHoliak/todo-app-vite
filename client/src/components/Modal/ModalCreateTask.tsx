@@ -104,6 +104,7 @@ const ModalCreateTask = () => {
             <button
                 className="modal-wrapper__content__create-button"
                 onClick={onClickCreateTask}
+                disabled={description.length > 0 && usersWhom.length > 0 ? false : true}
             >
                 Create
             </button>

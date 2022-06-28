@@ -91,6 +91,7 @@ const ModalCreateProject: FC = () => {
             <button
                 className="modal-wrapper__content__create-button"
                 onClick={onClickCreateProject}
+                disabled={title.length > 0 ? false : true}
             >
                 Create
             </button>
