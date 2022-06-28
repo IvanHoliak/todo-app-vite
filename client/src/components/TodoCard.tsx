@@ -129,6 +129,7 @@ const TodoCard: FC<ITodoCard> = ({task, category}) => {
                 <button 
                     className="tag__add-button"
                     title="Add whom tag" 
+                    disabled={true}
                 >
                     <FontAwesomeIcon icon={faPlus}/>
                 </button>
