@@ -40,4 +40,20 @@
     }
 }
 
+button {
+    &:disabled,
+    &[disabled] {
+        opacity: .4;
+        
+        &:hover {
+            box-shadow: none !important;
+        }
+        
+        &:active {
+            transform: none;
+            opacity: none;
+        }
+    }
+}
+
 
